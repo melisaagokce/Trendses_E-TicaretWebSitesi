@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sipariş Ekranı</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-image: url("https://images.unsplash.com/photo-1541339907198-e08756deddc5");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .container {
+        background-color: rgba(255, 192, 203, 0.7);
+        padding: 40px;
+        border-radius: 8px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        width: 400px;
+      }
+      .container h2 {
+        margin-top: 0;
+        text-align: center;
+        color: #330066;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        color: #660066;
+        font-weight: bold;
+      }
+      .form-group input,
+      .form-group textarea {
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        transition: border-color 0.3s;
+      }
+      .form-group textarea {
+        resize: vertical;
+      }
+      .form-group input:focus,
+      .form-group textarea:focus {
+        outline: none;
+        border-color: #ff69b4;
+      }
+      .form-group button {
+        background-color: #ff69b4;
+        color: #fff;
+        border: none;
+        padding: 12px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+      }
+      .form-group button:hover {
+        background-color: #d4418e;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 style="color: #86469c" id="siparis_ses-dosyasi">TRENDSES</h1>
+
+    <div class="container">
+      <h2>Sipariş Formu</h2>
+      <form action="/siparis" method="post">
+        <div class="form-group">
+          <label for="first-name">Ad</label>
+          <input
+            type="text"
+            id="first-name"
+            name="first-name"
+            required
+            autofocus
+          />
+        </div>
+        <div class="form-group">
+          <label for="last-name">Soyad</label>
+          <input type="text" id="last-name" name="last-name" required />
+        </div>
+        <div class="form-group">
+          <label for="address">Adres</label>
+          <textarea id="address" name="address" rows="3" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="phone">Telefon Numarası</label>
+          <input type="tel" id="phone" name="phone" required />
+        </div>
+        <div class="form-group">
+          <label for="order-details">Sipariş Detayları</label>
+          <textarea
+            id="order-details"
+            name="order-details"
+            rows="5"
+            required
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit">Siparişi Gönder</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
